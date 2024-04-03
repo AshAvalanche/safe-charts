@@ -32,6 +32,8 @@ data:
   EMAIL_TEMPLATE_RECOVERY_TX: {{ .Values.config.emailTemplate.recoveryTx | quote }}
   EMAIL_TEMPLATE_UNKNOWN_RECOVERY_TX: {{ .Values.config.emailTemplate.unknownRecoveryTx | quote }}
   EMAIL_TEMPLATE_VERIFICATION_CODE: {{ .Values.config.emailTemplate.verificationCode | quote }}
+  RELAY_PROVIDER_API_KEY_GNOSIS_CHAIN: {{ .Values.config.relayProvider.apiKeyGnosisChain | quote }}
+  RELAY_PROVIDER_API_KEY_SEPOLIA: {{ .Values.config.relayProvider.apiKeySepolia | quote }}
   {{- if .Values.config.extraEnvVars }}
   {{ .Values.config.extraEnvVars | toYaml | nindent 2 }}
   {{- end }}

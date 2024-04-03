@@ -34,17 +34,17 @@ nodeSelector: {}
 
 ## @param resources Resource specification to deployment
 ##
-resources: {}
-    # We usually recommend not to specify default resources and to leave this as a conscious
-    # choice for the user. This also increases chances charts run on environments with little
-    # resources, such as Minikube. If you do want to specify resources, uncomment the following
-    # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
-    # limits:
-    #   cpu: 100m
-    #   memory: 128Mi
-    # requests:
-    #   cpu: 100m
-    #   memory: 128Mi
+resources:
+  # We usually recommend not to specify default resources and to leave this as a conscious
+  # choice for the user. This also increases chances charts run on environments with little
+  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  limits:
+    cpu: 4
+    memory: 8Gi
+  requests:
+    cpu: 4
+    memory: 8Gi
 
 ## @param tolerations Tolerations specifications to deployment
 ##
@@ -67,7 +67,7 @@ image:
   ##
   tag: ""
 
-  ## @param image.pullPolicy Pull policy to deployment as deinfed in 
+  ## @param image.pullPolicy Pull policy to deployment as deinfed in
   ## ref: http://kubernetes.io/docs/user-guide/images/#pre-pulling-images
   ##
   pullPolicy: IfNotPresent
@@ -78,7 +78,7 @@ service:
   type: ClusterIP
   ports:
     ## @param service.ports.number service port number
-    ##  
+    ##
     number: 8080
     ## @param service.ports.name service port name
     ##
@@ -88,7 +88,6 @@ service:
   ## ref: https://kubernetes.io/docs/user-guide/services/
   ##
   sessionAffinity: None
-
 
 ingress:
   ## @param ingress.ingressClassName Name of the ingress class name to be used
@@ -107,7 +106,6 @@ ingress:
 ## @section Config Service Parameters
 
 config:
-
   ## @param config.extraEnvVars Add additional extra environment vairables to the configMap
   ##
   extraEnvVars: {}

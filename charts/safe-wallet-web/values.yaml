@@ -43,8 +43,8 @@ resources:
     cpu: 4
     memory: 8Gi
   requests:
-    cpu: 4
-    memory: 8Gi
+    cpu: 2
+    memory: 4Gi
 
 ## @param tolerations Tolerations specifications to deployment
 ##

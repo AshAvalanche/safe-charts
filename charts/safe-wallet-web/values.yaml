@@ -70,7 +70,7 @@ image:
   ## @param image.pullPolicy Pull policy to deployment as deinfed in
   ## ref: http://kubernetes.io/docs/user-guide/images/#pre-pulling-images
   ##
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
 
 service:
   ## @param service.type service type

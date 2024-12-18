@@ -132,6 +132,38 @@ config:
   infuraApiKey: ""
   ## @param config.relaysProviderApiKeyArbitrumOne Relay provider API key for Arbitrum One
   relaysProviderApiKeyArbitrumOne: ""
+  ## @param config.relaysProviderApiKeyOptimism Relay provider API key for Optimism
+  relaysProviderApiKeyOptimism: ""
+  ## @param config.relaysProviderApiKeyBsc Relay provider API key for BSC
+  relaysProviderApiKeyBsc: ""
+  ## @param config.relaysProviderApiKeyPolygon Relay provider API key for Polygon
+  relaysProviderApiKeyPolygon: ""
+  ## @param config.relaysProviderApiKeyPolygonZkEvm Relay provider API key for Polygon ZkEvm
+  relaysProviderApiKeyPolygonZkEvm: ""
+  ## @param config.relaysProviderApiKeyBase Relay provider API key for Base
+  relaysProviderApiKeyBase: ""
+  ## @param config.relaysProviderApiKeyAvalanche Relay provider API key for Avalanche
+  relaysProviderApiKeyAvalanche: ""
+  ## @param config.relaysProviderApiKeyLinea Relay provider API key for Linea
+  relaysProviderApiKeyLinea: ""
+  ## @param config.relaysProviderApiKeyBlast Relay provider API key for Blast
+  relaysProviderApiKeyBlast: ""
+  ## @param config.fingerprintEncryptionKey Fingerprint encryption key
+  fingerprintEncryptionKey: ""
+  ## @param config.jwtIssuer JWT issuer
+  jwtIssuer: ""
+  ## @param config.jwtSecret JWT secret
+  jwtSecret: ""
+  ## @param config.pushNotificationsApiProject Push notifications API project
+  pushNotificationsApiProject: ""
+  ## @param config.pushNotificationsApiServiceAccountClientEmail Push notifications API service account client email
+  pushNotificationsApiServiceAccountClientEmail: "default@mail.com"
+  ## @param config.pushNotificationsApiServiceAccountPrivateKey Push notifications API service account private key
+  pushNotificationsApiServiceAccountPrivateKey: ""
+  ## @param config.stakingApiKey Staking API key
+  stakingApiKey: ""
+  ## @param config.stakingTestnetApiKey Staking testnet API key
+  stakingTestnetApiKey: ""
 
   log:
     ## @param config.log.level Log level
@@ -168,3 +200,17 @@ config:
   ## @param config.extraEnvVars [object] Add additional extra environment vairables to the configMap
   ##
   extraEnvVars: {}
+
+  postgres:
+    ## @param config.postgres.secretReferenceKey Reference to an existing secret containing the following entries: POSTGRES_HOST, POSTGRES_PORT, POSTGRES_NAME, POSTGRES_USER, POSTGRES_PASSWORD
+    secretReferenceKey: ""
+    ## @param config.postgres.username PostgreSQL user
+    username: ""
+    ## @param config.postgres.password PostgreSQL user's password
+    password: ""
+    ## @param config.postgres.database PostgreSQL database name
+    database: safe-client-gateway
+    ## @param config.postgres.host PostgreSQL server host
+    host: ""
+    ## @param config.postgres.port PostgreSQL server port
+    port: "5432"

@@ -62,3 +62,14 @@ Redis Mainnet Secret
 {{ include "safe-client-gateway.name" . }}-redis-mainnet
 {{- end -}}
 {{- end -}}
+
+{{/*
+Postgres Secret
+*/}}
+{{- define "safe-client-gateway.postgres-secret" -}}
+{{- if .Values.config.postgres.secretReferenceKey -}}
+{{ .Values.config.postgres.secretReferenceKey }}
+{{- else -}}
+{{ include "safe-client-gateway.name" . }}-postgres
+{{- end -}}
+{{- end -}}

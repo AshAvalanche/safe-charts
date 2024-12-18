@@ -166,7 +166,7 @@ config:
   secretReferenceKey: ""
 
   ## @param config.debug Enable debug
-  debug: true
+  debug: false
 
   ## @param config.ethL2Network Log Level
   ethL2Network: 1

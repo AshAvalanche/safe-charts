@@ -59,6 +59,8 @@ spec:
               {{- else }}
               name: {{ include "safe-client-gateway.fullname" . }}
               {{- end }}
+          - secretRef:
+              name: {{ include "safe-client-gateway.postgres-secret" . }}
         ports:
         - containerPort: {{ .Values.service.ports.number }}
           name: {{ .Values.service.ports.name }}

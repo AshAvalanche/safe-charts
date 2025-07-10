@@ -214,3 +214,6 @@ config:
     host: ""
     ## @param config.postgres.port PostgreSQL server port
     port: "5432"
+
+  ## @param config.bridgeApiKey Bridge API key
+  bridgeApiKey: ""
